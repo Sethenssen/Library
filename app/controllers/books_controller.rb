@@ -10,12 +10,12 @@ class BooksController < ApplicationController
   
   # GET /books/available
   def available
-    @books = order_title.available
+    @books = order_title.available.page(params[:page])
   end
   
   # GET /books/reserved
   def reserved
-    @books = current_user.books
+    @books = current_user.books.page(params[:page])
   end
 
   # GET /books/1
