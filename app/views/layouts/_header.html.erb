@@ -1,0 +1,36 @@
+<div class="row">
+	<nav class="span12">
+		<div class="navbar">
+			<div class="navbar-inner">
+
+				<%= link_to t('site_title'), root_path, class: 'brand' %>
+
+                <ul class="nav">
+                    <li class="divider-vertical"></li>
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><%= t 'books.menu' %></a>
+                        <ul class="dropdown-menu">
+                            <li><%= link_to t('menu.books.available_html'), available_books_path %></li>
+                            <li><%= link_to t('menu.books.reserved_html'), reserved_books_path %></li>
+                            <li><%= link_to t('menu.books.new_html').html_safe, new_book_path %></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <% if user_signed_in? %>
+		            <ul class="nav pull-right">
+
+					    <li class="divider-vertical"></li>
+                        <li><%= link_to t('edituser'), edit_user_registration_path %></li>
+
+                        <li class="divider-vertical"></li>
+                        <li><%= link_to t('logout'), destroy_user_session_path, method: :delete %></li>
+
+				    </ul>
+                <% end %>
+
+			</div>
+		</div>
+	</nav>
+</div>

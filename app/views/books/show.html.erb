@@ -1,0 +1,14 @@
+<h1><%= @book.title %></h1>
+<hr />
+
+<% if @book.cover.exists? %>
+	<%= image_tag @book.cover.url(:medium) %>
+<% end %>
+
+<p>
+  <strong><%= t('author_label') %></strong>
+  <%= @book.author %>
+</p>
+
+<%= link_to t('edit'), edit_book_path(@book) %> |
+<%= link_to t('back'), books_path %>
