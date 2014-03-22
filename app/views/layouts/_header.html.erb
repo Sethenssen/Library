@@ -25,9 +25,14 @@
 		            <ul class="nav pull-right">
 
                         <li class="divider-vertical"></li>
-                        <li><%= link_to 'fr', root_path %></li>
+                        <li><%#= link_to 'fr', root_path %></li>
                         <!-- <li><img src="flags.png" class="flag flag-fr" alt="France" /></li> -->
 
+                        <% if I18n.locale != I18n.default_locale %>
+                            <li><%= link_to "English", '/en' %></li>
+                        <% else %>
+                            <li><%= link_to "Français", '/fr' %></li>
+                        <%end%>
 
 					    <li class="divider-vertical"></li>
                         <li><%= link_to t('edituser'), edit_user_registration_path %></li>
