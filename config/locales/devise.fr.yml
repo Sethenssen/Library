@@ -36,6 +36,7 @@ fr:
     registrations:
       new_title: "Inscription"
       new_button: "M'inscrire"
+      leave_blank: "laissez vide si vous ne désirez pas le changer"
       destroyed: 'Votre compte a été supprimé avec succès. Nous espérons vous revoir bientôt.'
       signed_up: 'Bienvenu, vous êtes connecté'
       signed_up_but_inactive: "Vous êtes bien enregistré. Vous ne pouvez cependant pas vous connecter car votre compte n'est pas encore activé."
